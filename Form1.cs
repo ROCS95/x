@@ -8,16 +8,19 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace MonolithConect
 {
     public partial class Form1 : Form
     {
         static string date = DateTime.Now.ToString("yyyy-MM-dd");
-        private int counter;
+        private int counter = 0;
+        private int refreshTime = 10;
         private string DesURL = "http://190.211.102.10:8787/";
         private string requestXml = "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">" +
     "<soap:Header>" +
@@ -70,8 +73,14 @@ namespace MonolithConect
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
                     Stream responseStream = response.GetResponseStream();
-                    string responseStr = new StreamReader(responseStream).ReadToEnd();
-                    return responseStr;
+                    string responseStr =  new StreamReader(responseStream).ReadToEnd();
+                    string responseFinal = responseStr.Replace("\0\r", "");
+                    using (StreamWriter outputFile = new StreamWriter(Path.Combine("data.xml")))
+                    {
+                        outputFile.WriteLine(responseFinal);
+                    }
+                    
+                    return responseFinal;
                 }
                 
             }
@@ -100,25 +109,48 @@ namespace MonolithConect
 
         private void Timer1_Tick(object Sender, EventArgs e)
         {
-            if (counter == 10)
+            if (counter == refreshTime)
             {
                 // Exit loop code.  
                 //timer1.Enabled = false;
                 
-                //counter = 0;
-                //label1.Text = counter.ToString();
-                //date = DateTime.Now.ToString("yyyy-MM-dd");
-                //textBox1.Text = postXMLData(DesURL, requestXml);
+                counter = 0;
+                label1.Text = counter.ToString();
+                date = DateTime.Now.ToString("yyyy-MM-dd");
+                string responce = postXMLData(DesURL, requestXml);
+                textBox1.Text = responce;
+                
             }
             else
             {
                 // Run your procedure here.  
                 // Increment counter.  
-                //counter = counter + 1;
-                //label1.Text = "Procedures Run: " + counter.ToString();
+                counter = counter + 1;
+                label1.Text = "Procedures Run: " + counter.ToString();
                 
             }
         }
 
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            String AllowedChars = @"^\d*$";
+            if (Regex.IsMatch(textBoxRefresh.Text, AllowedChars))
+            {
+                int refresh = Int32.Parse(textBoxRefresh.Text.ToString());
+                if (refresh > 0)
+                {
+                    refreshTime = refresh;
+                }
+                else
+                {
+                    textBoxRefresh.Text = "Use numeros positivos";
+                }
+            }
+            else
+            {
+                textBoxRefresh.Text = "Use numeros positivos";
+            }
+            
+        }
     }
 }

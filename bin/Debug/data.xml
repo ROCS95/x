@@ -1,0 +1,303 @@
+<INHOUSE>
+   <RESERVATION_LINE ID="10001">
+      <Reservation_ID>RS-0001101</Reservation_ID>
+      <Booking>ATAN147111</Booking>
+      <Arrival> 2021-02-20</Arrival>
+      <Departure> 2021-03-03</Departure>
+      <Room>16</Room>
+      <RoomType>1</RoomType>
+      <Agency>MEMORABLE COSTA RICA</Agency>
+      <Guarantee>02</Guarantee>
+      <MarketCode>02</MarketCode>
+      <SubMarketCode>01</SubMarketCode>
+      <GuestProfile>
+         <Name>JANA</Name>
+         <Surname>JUNGWIRTH</Surname>
+         <Identification>522825674</Identification>
+         <Telephone1>(920)6026524</Telephone1>
+         <Telephone2></Telephone2>
+         <POBox></POBox>
+         <Country>US</Country>
+         <email>rydjackson@yahoo.com</email>
+         <BirthDate>11-1976</BirthDate>
+      </GuestProfile>
+   </RESERVATION_LINE>
+   <RESERVATION_LINE ID="10001">
+      <Reservation_ID>RS-0001270</Reservation_ID>
+      <Booking></Booking>
+      <Arrival> 2021-02-24</Arrival>
+      <Departure> 2021-02-27</Departure>
+      <Room>19</Room>
+      <RoomType>1</RoomType>
+      <Agency>COSTA RICAN TRAILS</Agency>
+      <Guarantee>02</Guarantee>
+      <MarketCode>02</MarketCode>
+      <SubMarketCode>01</SubMarketCode>
+      <GuestProfile>
+         <Name>MARIA</Name>
+         <Surname>CANCEL HERNANDEZ</Surname>
+         <Identification>PAI035220</Identification>
+         <Telephone1></Telephone1>
+         <Telephone2></Telephone2>
+         <POBox></POBox>
+         <Country>US</Country>
+         <email>mariacandel4@gmail.com</email>
+         <BirthDate>6-1991</BirthDate>
+      </GuestProfile>
+   </RESERVATION_LINE>
+   <RESERVATION_LINE ID="10001">
+      <Reservation_ID>RS-0001335</Reservation_ID>
+      <Booking>607447</Booking>
+      <Arrival> 2021-02-26</Arrival>
+      <Departure> 2021-03-02</Departure>
+      <Room>03</Room>
+      <RoomType>1</RoomType>
+      <Agency>COSTARICAN VACATIONS</Agency>
+      <Guarantee>02</Guarantee>
+      <MarketCode>02</MarketCode>
+      <SubMarketCode>01</SubMarketCode>
+      <GuestProfile>
+         <Name>DARREN</Name>
+         <Surname>CARLSON</Surname>
+         <Identification></Identification>
+         <Telephone1></Telephone1>
+         <Telephone2></Telephone2>
+         <POBox></POBox>
+         <Country>US</Country>
+         <email></email>
+         <BirthDate>0-0</BirthDate>
+      </GuestProfile>
+   </RESERVATION_LINE>
+   <RESERVATION_LINE ID="10001">
+      <Reservation_ID>RS-0001359</Reservation_ID>
+      <Booking></Booking>
+      <Arrival> 2021-02-24</Arrival>
+      <Departure> 2021-02-27</Departure>
+      <Room>25</Room>
+      <RoomType>1</RoomType>
+      <Agency>COMPLETELY COSTA RICA</Agency>
+      <Guarantee>02</Guarantee>
+      <MarketCode>02</MarketCode>
+      <SubMarketCode>01</SubMarketCode>
+      <GuestProfile>
+         <Name>AMANDA</Name>
+         <Surname>TORNQUIST</Surname>
+         <Identification>542149443</Identification>
+         <Telephone1></Telephone1>
+         <Telephone2></Telephone2>
+         <POBox></POBox>
+         <Country>US</Country>
+         <email>amandatornquist@yahoo.com</email>
+         <BirthDate>11-1992</BirthDate>
+      </GuestProfile>
+   </RESERVATION_LINE>
+   <RESERVATION_LINE ID="10001">
+      <Reservation_ID>RS-0001402</Reservation_ID>
+      <Booking></Booking>
+      <Arrival> 2021-02-24</Arrival>
+      <Departure> 2021-02-28</Departure>
+      <Room>21</Room>
+      <RoomType>1</RoomType>
+      <Agency>COSTA RICAN TRAILS</Agency>
+      <Guarantee>02</Guarantee>
+      <MarketCode>02</MarketCode>
+      <SubMarketCode>01</SubMarketCode>
+      <GuestProfile>
+         <Name>MICHAEL</Name>
+         <Surname>ROSS</Surname>
+         <Identification>549896629</Identification>
+         <Telephone1></Telephone1>
+         <Telephone2></Telephone2>
+         <POBox></POBox>
+         <Country>US</Country>
+         <email>rosel9321@aol.com</email>
+         <BirthDate>2-50</BirthDate>
+      </GuestProfile>
+   </RESERVATION_LINE>
+   <RESERVATION_LINE ID="10001">
+      <Reservation_ID>RS-0001421</Reservation_ID>
+      <Booking></Booking>
+      <Arrival> 2021-02-26</Arrival>
+      <Departure> 2021-02-27</Departure>
+      <Room>06</Room>
+      <RoomType>1</RoomType>
+      <Agency>ARMOTOURS</Agency>
+      <Guarantee>02</Guarantee>
+      <MarketCode>02</MarketCode>
+      <SubMarketCode>01</SubMarketCode>
+      <GuestProfile>
+         <Name>PETER</Name>
+         <Surname>SUESSTRUNK</Surname>
+         <Identification>X1659525</Identification>
+         <Telephone1></Telephone1>
+         <Telephone2></Telephone2>
+         <POBox></POBox>
+         <Country>DE</Country>
+         <email>peter.suesstrunk@bluewin.ch</email>
+         <BirthDate>5-51</BirthDate>
+      </GuestProfile>
+   </RESERVATION_LINE>
+   <RESERVATION_LINE ID="10001">
+      <Reservation_ID>RS-0001436</Reservation_ID>
+      <Booking></Booking>
+      <Arrival> 2021-02-26</Arrival>
+      <Departure> 2021-02-28</Departure>
+      <Room>20</Room>
+      <RoomType>1</RoomType>
+      <Agency>DIRECTOS</Agency>
+      <Guarantee>02</Guarantee>
+      <MarketCode>01</MarketCode>
+      <SubMarketCode>01</SubMarketCode>
+      <GuestProfile>
+         <Name>THELMA</Name>
+         <Surname>AYALA MORALES</Surname>
+         <Identification>107700745</Identification>
+         <Telephone1>89122967</Telephone1>
+         <Telephone2></Telephone2>
+         <POBox></POBox>
+         <Country>CR</Country>
+         <email>tayala@purdymo.com</email>
+         <BirthDate>5-70</BirthDate>
+      </GuestProfile>
+   </RESERVATION_LINE>
+   <RESERVATION_LINE ID="10001">
+      <Reservation_ID>RS-0001450</Reservation_ID>
+      <Booking></Booking>
+      <Arrival> 2021-02-26</Arrival>
+      <Departure> 2021-03-01</Departure>
+      <Room>11</Room>
+      <RoomType>1</RoomType>
+      <Agency>LOCALISTA TRAVEL</Agency>
+      <Guarantee>02</Guarantee>
+      <MarketCode>03</MarketCode>
+      <SubMarketCode>03</SubMarketCode>
+      <GuestProfile>
+         <Name>MAREK</Name>
+         <Surname>WITKOWSKI</Surname>
+         <Identification>ET3938008</Identification>
+         <Telephone1></Telephone1>
+         <Telephone2></Telephone2>
+         <POBox></POBox>
+         <Country>PL</Country>
+         <email>witkowski007@interlo.pl</email>
+         <BirthDate>9-55</BirthDate>
+      </GuestProfile>
+   </RESERVATION_LINE>
+   <RESERVATION_LINE ID="10001">
+      <Reservation_ID>RS-0001457</Reservation_ID>
+      <Booking></Booking>
+      <Arrival> 2021-02-25</Arrival>
+      <Departure> 2021-02-27</Departure>
+      <Room>12</Room>
+      <RoomType>1</RoomType>
+      <Agency>WHITE GRANT S.R.O.</Agency>
+      <Guarantee>02</Guarantee>
+      <MarketCode>02</MarketCode>
+      <SubMarketCode>01</SubMarketCode>
+      <GuestProfile>
+         <Name>MILAN</Name>
+         <Surname>SREJBER</Surname>
+         <Identification>46108081</Identification>
+         <Telephone1></Telephone1>
+         <Telephone2></Telephone2>
+         <POBox></POBox>
+         <Country>CZ</Country>
+         <email>milansrejber@sezaim.cz</email>
+         <BirthDate>12-63</BirthDate>
+      </GuestProfile>
+   </RESERVATION_LINE>
+   <RESERVATION_LINE ID="10001">
+      <Reservation_ID>RS-0001485</Reservation_ID>
+      <Booking></Booking>
+      <Arrival> 2021-02-23</Arrival>
+      <Departure> 2021-02-28</Departure>
+      <Room>09</Room>
+      <RoomType>1</RoomType>
+      <Agency>DIRECTOS</Agency>
+      <Guarantee>01</Guarantee>
+      <MarketCode>01</MarketCode>
+      <SubMarketCode>01</SubMarketCode>
+      <GuestProfile>
+         <Name>JANOS</Name>
+         <Surname>SKARE</Surname>
+         <Identification>BJ7786446</Identification>
+         <Telephone1></Telephone1>
+         <Telephone2></Telephone2>
+         <POBox></POBox>
+         <Country>HU</Country>
+         <email>jskore@gmail.com</email>
+         <BirthDate>2-72</BirthDate>
+      </GuestProfile>
+   </RESERVATION_LINE>
+   <RESERVATION_LINE ID="10001">
+      <Reservation_ID>RS-0001499</Reservation_ID>
+      <Booking></Booking>
+      <Arrival> 2021-02-26</Arrival>
+      <Departure> 2021-02-27</Departure>
+      <Room></Room>
+      <RoomType>1</RoomType>
+      <Agency>DIRECTOS</Agency>
+      <Guarantee>04</Guarantee>
+      <MarketCode>01</MarketCode>
+      <SubMarketCode>01</SubMarketCode>
+      <GuestProfile>
+         <Name>JUAN PABLO</Name>
+         <Surname>DOMINGUEZ</Surname>
+         <Identification>000000000000</Identification>
+         <Telephone1></Telephone1>
+         <Telephone2></Telephone2>
+         <POBox></POBox>
+         <Country>CR</Country>
+         <email>jdominguez@amorarenal.com</email>
+         <BirthDate>0-0</BirthDate>
+      </GuestProfile>
+   </RESERVATION_LINE>
+   <RESERVATION_LINE ID="01001">
+      <Reservation_ID>WR-001689</Reservation_ID>
+      <Booking>OLYCR0V</Booking>
+      <Arrival> 2021-02-26</Arrival>
+      <Departure> 2021-02-28</Departure>
+      <Room>22</Room>
+      <RoomType>1</RoomType>
+      <Agency>DIRECTOS WEB</Agency>
+      <Guarantee>01</Guarantee>
+      <MarketCode></MarketCode>
+      <SubMarketCode>0</SubMarketCode>
+      <GuestProfile>
+         <Name>ALYSSA</Name>
+         <Surname>JOHANSEN</Surname>
+         <Identification>519281432</Identification>
+         <Telephone1>3174605858</Telephone1>
+         <Telephone2></Telephone2>
+         <POBox></POBox>
+         <Country>US</Country>
+         <email>alyssameetra@gmail.com</email>
+         <BirthDate>3-90</BirthDate>
+      </GuestProfile>
+   </RESERVATION_LINE>
+   <RESERVATION_LINE ID="01001">
+      <Reservation_ID>WR-001765</Reservation_ID>
+      <Booking>OTA-3909710793-05</Booking>
+      <Arrival> 2021-02-26</Arrival>
+      <Departure> 2021-02-28</Departure>
+      <Room>08</Room>
+      <RoomType>2</RoomType>
+      <Agency>BOOKING.COM</Agency>
+      <Guarantee>02</Guarantee>
+      <MarketCode></MarketCode>
+      <SubMarketCode>1</SubMarketCode>
+      <GuestProfile>
+         <Name>LENA</Name>
+         <Surname>MENNERON</Surname>
+         <Identification>17DK18274</Identification>
+         <Telephone1>0623315805</Telephone1>
+         <Telephone2></Telephone2>
+         <POBox>89000</POBox>
+         <Country>FR</Country>
+         <email>docteur.menneron@gmail.com</email>
+         <BirthDate>6-1985</BirthDate>
+      </GuestProfile>
+   </RESERVATION_LINE>
+</INHOUSE>
+
+

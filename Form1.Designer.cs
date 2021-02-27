@@ -33,6 +33,8 @@ namespace MonolithConect
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.textBoxRefresh = new System.Windows.Forms.TextBox();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -40,7 +42,8 @@ namespace MonolithConect
             this.textBox1.Location = new System.Drawing.Point(53, 27);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(710, 411);
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox1.Size = new System.Drawing.Size(695, 271);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -54,11 +57,31 @@ namespace MonolithConect
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             // 
+            // textBoxRefresh
+            // 
+            this.textBoxRefresh.Location = new System.Drawing.Point(69, 363);
+            this.textBoxRefresh.Name = "textBoxRefresh";
+            this.textBoxRefresh.Size = new System.Drawing.Size(154, 20);
+            this.textBoxRefresh.TabIndex = 2;
+            this.textBoxRefresh.Text = "10";
+            // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.Location = new System.Drawing.Point(253, 361);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(120, 23);
+            this.buttonRefresh.TabIndex = 3;
+            this.buttonRefresh.Text = "Set Refresh Time";
+            this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonRefresh);
+            this.Controls.Add(this.textBoxRefresh);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
@@ -73,6 +96,8 @@ namespace MonolithConect
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxRefresh;
+        private System.Windows.Forms.Button buttonRefresh;
     }
 }
 
