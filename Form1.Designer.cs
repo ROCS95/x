@@ -1,7 +1,7 @@
 ﻿
 namespace MonolithConect
 {
-    partial class Form1
+    partial class MonolithConect
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -30,22 +30,15 @@ namespace MonolithConect
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxRefresh = new System.Windows.Forms.TextBox();
             this.buttonRefresh = new System.Windows.Forms.Button();
+            this.dataGridLog = new System.Windows.Forms.DataGridView();
+            this.textBoxRequest = new System.Windows.Forms.TextBox();
+            this.textBoxResponse = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridLog)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(53, 27);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(695, 271);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -59,7 +52,7 @@ namespace MonolithConect
             // 
             // textBoxRefresh
             // 
-            this.textBoxRefresh.Location = new System.Drawing.Point(69, 363);
+            this.textBoxRefresh.Location = new System.Drawing.Point(26, 478);
             this.textBoxRefresh.Name = "textBoxRefresh";
             this.textBoxRefresh.Size = new System.Drawing.Size(154, 20);
             this.textBoxRefresh.TabIndex = 2;
@@ -67,7 +60,7 @@ namespace MonolithConect
             // 
             // buttonRefresh
             // 
-            this.buttonRefresh.Location = new System.Drawing.Point(253, 361);
+            this.buttonRefresh.Location = new System.Drawing.Point(210, 476);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(120, 23);
             this.buttonRefresh.TabIndex = 3;
@@ -75,29 +68,68 @@ namespace MonolithConect
             this.buttonRefresh.UseVisualStyleBackColor = true;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
-            // Form1
+            // dataGridLog
+            // 
+            this.dataGridLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridLog.Location = new System.Drawing.Point(26, 28);
+            this.dataGridLog.Name = "dataGridLog";
+            this.dataGridLog.Size = new System.Drawing.Size(726, 175);
+            this.dataGridLog.TabIndex = 4;
+            // 
+            // textBoxRequest
+            // 
+            this.textBoxRequest.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxRequest.Location = new System.Drawing.Point(26, 209);
+            this.textBoxRequest.Multiline = true;
+            this.textBoxRequest.Name = "textBoxRequest";
+            this.textBoxRequest.ReadOnly = true;
+            this.textBoxRequest.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxRequest.Size = new System.Drawing.Size(726, 134);
+            this.textBoxRequest.TabIndex = 5;
+            // 
+            // textBoxResponse
+            // 
+            this.textBoxResponse.Location = new System.Drawing.Point(26, 349);
+            this.textBoxResponse.Multiline = true;
+            this.textBoxResponse.Name = "textBoxResponse";
+            this.textBoxResponse.ReadOnly = true;
+            this.textBoxResponse.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxResponse.Size = new System.Drawing.Size(726, 123);
+            this.textBoxResponse.TabIndex = 6;
+            // 
+            // MonolithConect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 508);
+            this.Controls.Add(this.textBoxResponse);
+            this.Controls.Add(this.textBoxRequest);
+            this.Controls.Add(this.dataGridLog);
             this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.textBoxRefresh);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MonolithConect";
+            this.Text = "MonolithConect";
+            this.Load += new System.EventHandler(this.MonolithConect_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridLog)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxRefresh;
         private System.Windows.Forms.Button buttonRefresh;
+        private System.Windows.Forms.DataGridView dataGridLog;
+        private System.Windows.Forms.TextBox textBoxRequest;
+        private System.Windows.Forms.TextBox textBoxResponse;
     }
 }
 
