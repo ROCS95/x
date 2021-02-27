@@ -23,23 +23,23 @@ namespace MonolithConect
         private int counter = 0;
         private int refreshTime = 10;
         private string DesURL = "http://190.211.102.10:8787/";
-        private string requestXml = "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">" +
-    "<soap:Header>" +
-    "<HTNGHeader xmlns = \"http://htng.org/1.1/Header/\" >" +
-    "<EX_HOTEL>" +
-       " <login>" +
-           "<username> p1 </username>" +
-           "<password> p1 </password>" +
-        "</login>" +
-    "</EX_HOTEL>" +
-    "</HTNGHeader>" +
-    "</soap:Header>" +
-    "<soap:Body>" +
-    "<GET_EXT_INHOUSE>" +
-       "<Query_Date>"+ date + "</Query_Date>" +
-    "</GET_EXT_INHOUSE>" +
-   " </soap:Body>" +
-"</soap:Envelope>";
+        private string requestXml = "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n" +
+    "<soap:Header>\n" +
+    "<HTNGHeader xmlns = \"http://htng.org/1.1/Header/\" >\n" +
+    "<EX_HOTEL>\n" +
+       " <login>\n" +
+           "<username> p1 </username>\n" +
+           "<password> p1 </password>\n" +
+        "</login>\n" +
+    "</EX_HOTEL>\n" +
+    "</HTNGHeader>\n" +
+    "</soap:Header>\n" +
+    "<soap:Body>\n" +
+    "<GET_EXT_INHOUSE>\n" +
+       "<Query_Date>"+ date + "</Query_Date>\n" +
+    "</GET_EXT_INHOUSE>\n" +
+    "</soap:Body>\n" +
+"</soap:Envelope>\n";
 
 
         public MonolithConect()
@@ -98,13 +98,13 @@ namespace MonolithConect
         {
             if (i)
             {
-                DataRow row = dt.NewRow();
 
+                DataRow row = dt.NewRow();
                 row["Fecha"] = date;
                 row["Hora"] = DateTime.Now.ToString("HH:mm:ss"); ;
                 row["Descripcion"] = "Request Send";
                 dt.Rows.Add(row);
-                textBoxRequest.Text = requestXml;
+                textBoxRequest.Text = ExtractQuery();//requestXml;
             }
             else if(!i)
             {
@@ -114,8 +114,34 @@ namespace MonolithConect
                 row["Hora"] = DateTime.Now.ToString("HH:mm:ss"); ;
                 row["Descripcion"] = "Response received";
                 dt.Rows.Add(row);
+                DataSet dataSet = new DataSet();
+                dataSet.ReadXml("data.xml");
+                dataGridResponse.DataSource = dataSet.Tables[0];
             }
 
+        }
+
+        private string ExtractQuery()
+        {
+            string query = "";
+            bool xml = false;
+            string[] request = requestXml.Split('\n');
+            foreach (var line in request)
+            {
+                if (line.ToString().Contains("<soap:Body>"))
+                {
+                    xml = !xml;
+                }
+                else if (line.ToString().Contains("</soap:Body>"))
+                {
+                    xml = !xml;
+                }
+                if (xml && !line.ToString().Contains("soap:Body"))
+                {
+                    query += line.ToString()+"\n\n";
+                }
+            }
+            return query;
         }
 
         private void InitializeTimer()
@@ -136,8 +162,7 @@ namespace MonolithConect
                 counter = 0;
                 label1.Text = counter.ToString();
                 date = DateTime.Now.ToString("yyyy-MM-dd");
-                textBoxResponse.Text = postXMLData(DesURL, requestXml);
-
+                postXMLData(DesURL, requestXml);
             }
             else
             {
@@ -176,7 +201,7 @@ namespace MonolithConect
             dt.Columns.Add("Hora");
             dt.Columns.Add("Descripcion");
             dataGridLog.DataSource = dt;
-            textBoxResponse.Text = postXMLData(DesURL, requestXml);
+            postXMLData(DesURL, requestXml);
         }
     }
 }
