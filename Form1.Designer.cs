@@ -36,14 +36,16 @@ namespace MonolithConect
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.dataGridLog = new System.Windows.Forms.DataGridView();
             this.textBoxRequest = new System.Windows.Forms.TextBox();
-            this.textBoxResponse = new System.Windows.Forms.TextBox();
+            this.dataGridResponse = new System.Windows.Forms.DataGridView();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLog)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridResponse)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(2, -1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
@@ -92,22 +94,23 @@ namespace MonolithConect
             this.textBoxRequest.Size = new System.Drawing.Size(726, 134);
             this.textBoxRequest.TabIndex = 5;
             // 
-            // textBoxResponse
+            // dataGridResponse
             // 
-            this.textBoxResponse.Location = new System.Drawing.Point(26, 349);
-            this.textBoxResponse.Multiline = true;
-            this.textBoxResponse.Name = "textBoxResponse";
-            this.textBoxResponse.ReadOnly = true;
-            this.textBoxResponse.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxResponse.Size = new System.Drawing.Size(726, 123);
-            this.textBoxResponse.TabIndex = 6;
+            this.dataGridResponse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridResponse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridResponse.Location = new System.Drawing.Point(26, 346);
+            this.dataGridResponse.Name = "dataGridResponse";
+            this.dataGridResponse.Size = new System.Drawing.Size(726, 124);
+            this.dataGridResponse.TabIndex = 6;
             // 
             // MonolithConect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 508);
-            this.Controls.Add(this.textBoxResponse);
+            this.Controls.Add(this.dataGridResponse);
             this.Controls.Add(this.textBoxRequest);
             this.Controls.Add(this.dataGridLog);
             this.Controls.Add(this.buttonRefresh);
@@ -117,6 +120,7 @@ namespace MonolithConect
             this.Text = "MonolithConect";
             this.Load += new System.EventHandler(this.MonolithConect_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLog)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridResponse)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,7 +133,8 @@ namespace MonolithConect
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.DataGridView dataGridLog;
         private System.Windows.Forms.TextBox textBoxRequest;
-        private System.Windows.Forms.TextBox textBoxResponse;
+        private System.Windows.Forms.DataGridView dataGridResponse;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
