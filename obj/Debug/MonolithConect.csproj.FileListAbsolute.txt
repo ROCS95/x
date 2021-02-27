@@ -1,0 +1,10 @@
+C:\Users\Robert\Documents\Proyectos\MonolithConect\bin\Debug\MonolithConect.exe.config
+C:\Users\Robert\Documents\Proyectos\MonolithConect\bin\Debug\MonolithConect.exe
+C:\Users\Robert\Documents\Proyectos\MonolithConect\bin\Debug\MonolithConect.pdb
+C:\Users\Robert\Documents\Proyectos\MonolithConect\obj\Debug\MonolithConect.csprojAssemblyReference.cache
+C:\Users\Robert\Documents\Proyectos\MonolithConect\obj\Debug\MonolithConect.Form1.resources
+C:\Users\Robert\Documents\Proyectos\MonolithConect\obj\Debug\MonolithConect.Properties.Resources.resources
+C:\Users\Robert\Documents\Proyectos\MonolithConect\obj\Debug\MonolithConect.csproj.GenerateResource.cache
+C:\Users\Robert\Documents\Proyectos\MonolithConect\obj\Debug\MonolithConect.csproj.CoreCompileInputs.cache
+C:\Users\Robert\Documents\Proyectos\MonolithConect\obj\Debug\MonolithConect.exe
+C:\Users\Robert\Documents\Proyectos\MonolithConect\obj\Debug\MonolithConect.pdb
