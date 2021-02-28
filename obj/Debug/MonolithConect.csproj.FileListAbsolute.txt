@@ -8,3 +8,4 @@ C:\Users\Robert\Documents\Proyectos\MonolithConect\obj\Debug\MonolithConect.cspr
 C:\Users\Robert\Documents\Proyectos\MonolithConect\obj\Debug\MonolithConect.exe
 C:\Users\Robert\Documents\Proyectos\MonolithConect\obj\Debug\MonolithConect.pdb
 C:\Users\Robert\Documents\Proyectos\MonolithConect\obj\Debug\MonolithConect.MonolithConect.resources
+C:\Users\Robert\Documents\Proyectos\MonolithConect\obj\Debug\MonolithConect.IpSetUp.resources

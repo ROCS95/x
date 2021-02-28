@@ -21,8 +21,10 @@ namespace MonolithConect
         private DataTable dt = new DataTable();
         static string date = DateTime.Now.ToString("yyyy-MM-dd");
         private int counter = 0;
-        private int refreshTime = 10;
-        private string DesURL = "http://190.211.102.10:8787/";
+        private int refreshTime = 300000;
+        private string url;
+        private string port;
+        private string DesURL = "";
         private string requestXml = "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n" +
     "<soap:Header>\n" +
     "<HTNGHeader xmlns = \"http://htng.org/1.1/Header/\" >\n" +
@@ -54,6 +56,7 @@ namespace MonolithConect
         {
             try
             {
+                
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(destinationUrl);
                 byte[] bytes;
                 bytes = System.Text.Encoding.ASCII.GetBytes(requestXml);
@@ -72,7 +75,7 @@ namespace MonolithConect
                     Stream responseStream = response.GetResponseStream();
                     string responseStr =  new StreamReader(responseStream).ReadToEnd();
                     string responseFinal = responseStr.Replace("\0\r", "");
-                    using (StreamWriter outputFile = new StreamWriter(Path.Combine("data.xml")))
+                    using (StreamWriter outputFile = new StreamWriter(Path.Combine(@"C:/xampp/htdocs/ex_hotel/data.xml")))
                     {
                         outputFile.WriteLine(responseFinal);
                     }
@@ -115,7 +118,7 @@ namespace MonolithConect
                 row["Descripcion"] = "Response received";
                 dt.Rows.Add(row);
                 DataSet dataSet = new DataSet();
-                dataSet.ReadXml("data.xml");
+                dataSet.ReadXml(@"C:/xampp/htdocs/ex_hotel/data.xml");
                 dataGridResponse.DataSource = dataSet.Tables[0];
             }
 
@@ -162,7 +165,8 @@ namespace MonolithConect
                 counter = 0;
                 label1.Text = counter.ToString();
                 date = DateTime.Now.ToString("yyyy-MM-dd");
-                postXMLData(DesURL, requestXml);
+                hacerPost();
+
             }
             else
             {
@@ -174,7 +178,7 @@ namespace MonolithConect
 
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
-            String AllowedChars = @"^\d*$";
+            String AllowedChars = @"^\d+$";
             if (Regex.IsMatch(textBoxRefresh.Text, AllowedChars))
             {
                 int refresh = Int32.Parse(textBoxRefresh.Text.ToString());
@@ -201,7 +205,38 @@ namespace MonolithConect
             dt.Columns.Add("Hora");
             dt.Columns.Add("Descripcion");
             dataGridLog.DataSource = dt;
-            postXMLData(DesURL, requestXml);
+            hacerPost();
+
+        }
+
+        private void loadIPPort()
+        {
+            string ip = System.IO.File.ReadAllText("ip.txt");
+            string puerto = System.IO.File.ReadAllText("port.txt");
+            url = ip;
+            port = puerto;
+        }
+
+        private void hacerPost()
+        {
+            loadIPPort();
+            DesURL = "http://"+url+":"+port+"/";
+            DesURL = DesURL.Replace("\r\n" , "");
+            if (DesURL != "http://:/" && DesURL != "")
+            {
+                postXMLData(DesURL, requestXml);
+            }
+            else
+            {
+                textBoxRequest.Text = "Por Favor Introdusca una IP y un Puerto para hacer las consultas";
+            }
+        }
+
+        private void iPyPortToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IpSetUp frm = new IpSetUp();
+            frm.ShowDialog();
+            hacerPost();
         }
     }
 }
