@@ -220,13 +220,13 @@
       <GuestProfile>
          <Name>JAVIER</Name>
          <Surname>CADENA</Surname>
-         <Identification></Identification>
+         <Identification>531233892</Identification>
          <Telephone1>+1 813 330 1384</Telephone1>
          <Telephone2></Telephone2>
          <POBox></POBox>
          <Country>US</Country>
-         <email></email>
-         <BirthDate>0-0</BirthDate>
+         <email>jacamilemon@gmail.com</email>
+         <BirthDate>5-77</BirthDate>
       </GuestProfile>
    </RESERVATION_LINE>
    <RESERVATION_LINE ID="01001">
@@ -249,7 +249,7 @@
          <POBox></POBox>
          <Country>CR</Country>
          <email>javgon78@gmail.com</email>
-         <BirthDate>0-0</BirthDate>
+         <BirthDate>9-78</BirthDate>
       </GuestProfile>
    </RESERVATION_LINE>
    <RESERVATION_LINE ID="01001">

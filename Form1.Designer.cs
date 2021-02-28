@@ -37,16 +37,19 @@ namespace MonolithConect
             this.dataGridLog = new System.Windows.Forms.DataGridView();
             this.textBoxRequest = new System.Windows.Forms.TextBox();
             this.dataGridResponse = new System.Windows.Forms.DataGridView();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.setUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iPyPortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridResponse)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(2, -1);
+            this.label1.Location = new System.Drawing.Point(758, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 1;
@@ -58,7 +61,7 @@ namespace MonolithConect
             this.textBoxRefresh.Name = "textBoxRefresh";
             this.textBoxRefresh.Size = new System.Drawing.Size(154, 20);
             this.textBoxRefresh.TabIndex = 2;
-            this.textBoxRefresh.Text = "10";
+            this.textBoxRefresh.Text = "300000";
             // 
             // buttonRefresh
             // 
@@ -105,6 +108,32 @@ namespace MonolithConect
             this.dataGridResponse.Size = new System.Drawing.Size(726, 124);
             this.dataGridResponse.TabIndex = 6;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.setUpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 7;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // setUpToolStripMenuItem
+            // 
+            this.setUpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.iPyPortToolStripMenuItem});
+            this.setUpToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setUpToolStripMenuItem.Name = "setUpToolStripMenuItem";
+            this.setUpToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.setUpToolStripMenuItem.Text = "SetUp";
+            // 
+            // iPyPortToolStripMenuItem
+            // 
+            this.iPyPortToolStripMenuItem.Name = "iPyPortToolStripMenuItem";
+            this.iPyPortToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.iPyPortToolStripMenuItem.Text = "IPyPort";
+            this.iPyPortToolStripMenuItem.Click += new System.EventHandler(this.iPyPortToolStripMenuItem_Click);
+            // 
             // MonolithConect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -116,11 +145,15 @@ namespace MonolithConect
             this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.textBoxRefresh);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MonolithConect";
             this.Text = "MonolithConect";
             this.Load += new System.EventHandler(this.MonolithConect_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridResponse)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,7 +167,9 @@ namespace MonolithConect
         private System.Windows.Forms.DataGridView dataGridLog;
         private System.Windows.Forms.TextBox textBoxRequest;
         private System.Windows.Forms.DataGridView dataGridResponse;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem setUpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem iPyPortToolStripMenuItem;
     }
 }
 
