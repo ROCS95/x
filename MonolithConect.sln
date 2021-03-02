@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonolithConect", "MonolithConect.csproj", "{31B1AC73-4BE7-440B-A5D7-7C7FBCFD6B2C}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MonolithConectSetUp", "..\MonolithConectSetUp\MonolithConectSetUp.vdproj", "{6F2E8B58-218A-4685-A065-798E1F81124B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,8 +15,6 @@ Global
 		{31B1AC73-4BE7-440B-A5D7-7C7FBCFD6B2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31B1AC73-4BE7-440B-A5D7-7C7FBCFD6B2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31B1AC73-4BE7-440B-A5D7-7C7FBCFD6B2C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6F2E8B58-218A-4685-A065-798E1F81124B}.Debug|Any CPU.ActiveCfg = Release
-		{6F2E8B58-218A-4685-A065-798E1F81124B}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
