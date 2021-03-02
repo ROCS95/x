@@ -7,6 +7,8 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -56,7 +58,7 @@ namespace MonolithConect
         {
             try
             {
-                
+                ServicePointManager.ServerCertificateValidationCallback = new System.Net.Security.RemoteCertificateValidationCallback(AcceptAllCertifications);
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(destinationUrl);
                 byte[] bytes;
                 bytes = System.Text.Encoding.ASCII.GetBytes(requestXml);
@@ -93,10 +95,31 @@ namespace MonolithConect
             {
                 Console.WriteLine("\nException Caught!");
                 Console.WriteLine("Message :{0} ", e.Message);
+            }catch (WebException ex)
+            {
+                errorLog();
             }
+
             return null;
         }
-        
+
+        private bool AcceptAllCertifications(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
+        {
+            return true;
+        }
+
+        private void errorLog()
+        {
+            DataRow row = dt.NewRow();
+
+            row["Fecha"] = date;
+            row["Hora"] = DateTime.Now.ToString("HH:mm:ss"); ;
+            row["Descripcion"] = "Request Fail";
+            dt.Rows.Add(row);
+            textBoxRequest.Text = "Error inesperado por favor revise su coneccion a internet o la sentencia del request";
+
+        }
+
         private void Log(bool i)
         {
             if (i)
